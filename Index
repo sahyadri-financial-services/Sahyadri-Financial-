@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahyadri Financial Services</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin:0; padding:0; }
+    header { background: #2a4d6c; color: #fff; padding: 20px 0; text-align: center; }
+    nav ul { display: flex; justify-content: center; gap: 20px; list-style: none; padding: 0; margin: 0; }
+    nav a { color: #fff; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    section { max-width: 800px; margin: 40px auto; padding: 20px; background: #f9f9f9; border-radius: 14px; box-shadow: 0 2px 8px rgba(44,71,107,0.1);}
+    h1, h2 { margin-top: 0; }
+    .insta-link { text-align: center; margin: 30px 0; }
+    .insta-link a { color: #d6249f; font-size: 18px; text-decoration: none; }
+    @media (max-width: 600px) {
+      nav ul { flex-direction: column; gap: 12px; }
+      section { margin: 20px 5px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sahyadri Financial Services</h1>
+    <p>Schemes. Subsidy. Success.<br>योजना | सबसिडी | यश</p>
+    <nav>
+      <ul>
+        <li><a href="#home">मुख्यपृष्ठ</a></li>
+        <li><a href="#about">आमच्याबद्दल</a></li>
+        <li><a href="#services">सेवा</a></li>
+        <li><a href="#schemes">शासकीय योजना</a></li>
+        <li><a href="#contact">संपर्क</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="home">
+    <h2>Welcome to Sahyadri Financial Services</h2>
+    <p>महाराष्ट्रातील प्रत्येक व्यक्तीसाठी योजना, सबसिडी आणि बँक कर्जाचे सुलभ सल्ला व सेवा. तुमच्या व्यवसायाच्या वाढीसाठी आमचा अनुभव आणि मार्गदर्शन!</p>
+  </section>
+  <section id="about">
+    <h2>आमच्याबद्दल</h2>
+    <p>
+      Sahyadri Financial Services – महाराष्ट्रातील सर्व शासकीय योजना, सबसिडी, आणि बँक कर्जासाठी एकमेव समाधान. आमच्या तज्ञ टीममार्फत तुम्हाला सर्व कागदपत्रे, मार्गदर्शन आणि प्रोसिजर सहज मिळेल.
+    </p>
+  </section>
+  <section id="services">
+    <h2>आमच्या सेवा</h2>
+    <ul>
+      <li>सरकारी योजना मार्गदर्शन</li>
+      <li>सबसिडी प्रक्रिया व अर्ज</li>
+      <li>बँक कर्ज सल्ला</li>
+      <li>प्रकल्प अहवाल (DPR) तयारी</li>
+      <li>प्रोफाइल सेटअप, कागदपत्रे, नोंदणी मदत</li>
+    </ul>
+  </section>
+  <section id="schemes">
+    <h2>शासकीय योजना</h2>
+    <ul>
+      <li>PSI Scheme (पॅकेज स्कीम ऑफ इन्सेंटिव्ह)</li>
+      <li>SCLCSS Subsidy (मशीनरी सबसिडी)</li>
+      <li>Annasaheb Patil Arthik Vikas Mahamandal Yojana</li>
+      <li>PMEGP/CMGP/Yuva Udyamita Yojana</li>
+      <li>मुख्यमंत्री अन्न प्रक्रिया उद्योग योजना</li>
+      <li>इतर सर्व केंद्र व राज्य योजना</li>
+    </ul>
+  </section>
+  <section id="contact">
+    <h2>संपर्क साधा</h2>
+    <p>
+      <b>फोन:</b> 8888077001<br>
+      <b>Email:</b> rahulpawarrp443@gmail.com<br>
+      <b>पत्ता:</b> पिंपळे गुरव, पुणे
+    </p>
+    <div class="insta-link">
+      <a href="https://www.instagram.com/sahyadri_finacial_services?igsh=ZTZhbWVka2N4MHA2" target="_blank">
+        आमच्या Instagram पेजला फॉलो करा
+      </a>
+    </div>
+  </section>
+</body>
+</html>
