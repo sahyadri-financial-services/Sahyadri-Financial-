@@ -4,26 +4,110 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sahyadri Financial Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Segoe UI', Arial, sans-serif; margin:0; padding:0; }
-    header { background: #2a4d6c; color: #fff; padding: 20px 0; text-align: center; }
-    nav ul { display: flex; justify-content: center; gap: 20px; list-style: none; padding: 0; margin: 0; }
-    nav a { color: #fff; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    section { max-width: 800px; margin: 40px auto; padding: 20px; background: #f9f9f9; border-radius: 14px; box-shadow: 0 2px 8px rgba(44,71,107,0.1);}
-    h1, h2 { margin-top: 0; }
-    .insta-link { text-align: center; margin: 30px 0; }
-    .insta-link a { color: #d6249f; font-size: 18px; text-decoration: none; }
-    @media (max-width: 600px) {
-      nav ul { flex-direction: column; gap: 12px; }
-      section { margin: 20px 5px; }
+    body {
+      margin: 0; font-family: 'Roboto', Arial, sans-serif; background: #f5f7fa; color: #263343;
+    }
+    header {
+      background: linear-gradient(90deg, #2a4d6c 60%, #5293c6 100%);
+      color: #fff; padding: 48px 10px 36px 10px; text-align: center;
+      position: relative;
+    }
+    .logo {
+      width: 90px; height: 90px; border-radius: 50%; background: #fff;
+      margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(60,80,120,0.08);
+      font-size: 40px; color: #2a4d6c; font-weight: bold;
+    }
+    header h1 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 2.8rem; margin: 8px 0 8px 0; font-weight: 700; letter-spacing: 1px;
+    }
+    header p {
+      font-size: 1.1rem; margin: 5px 0 0 0; opacity: .95;
+    }
+    nav {
+      margin-top: 30px;
+    }
+    nav ul {
+      display: flex; justify-content: center; gap: 28px; list-style: none; padding: 0; margin: 0;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #fff; text-decoration: none; font-size: 1.08rem; font-weight: bold; transition: color 0.2s;
+      padding-bottom: 2px; border-bottom: 2px solid transparent;
+    }
+    nav a:hover {
+      color: #ffe28c; border-bottom: 2px solid #ffe28c;
+    }
+    .container {
+      max-width: 900px; margin: -60px auto 30px auto; padding: 0 12px;
+    }
+    .card {
+      background: #fff; border-radius: 18px; box-shadow: 0 4px 24px rgba(70,110,170,0.09);
+      margin-bottom: 30px; padding: 32px 22px 26px 22px;
+    }
+    .card h2 {
+      font-size: 1.4rem; font-weight: 700; margin: 0 0 8px 0; letter-spacing: 0.5px;
+    }
+    .card ul {
+      margin: 7px 0 0 18px;
+    }
+    .services-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    }
+    .service-card {
+      background: linear-gradient(100deg, #ecf2fa 70%, #e3f6f5 100%);
+      border-radius: 15px; box-shadow: 0 1px 8px rgba(80,130,210,0.07);
+      padding: 20px 18px 18px 18px; min-height: 130px; transition: transform .18s;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .service-card:hover { transform: translateY(-6px) scale(1.03); box-shadow: 0 4px 18px rgba(80,130,210,0.17);}
+    .service-card h3 { margin: 0 0 5px 0; font-size: 1.09rem; color: #2a4d6c;}
+    .service-card p { margin: 0; font-size: .97rem;}
+    .actions-bar {
+      display: flex; justify-content: center; gap: 22px; margin: 38px 0 12px 0;
+      flex-wrap: wrap;
+    }
+    .action-btn {
+      background: #25d366; color: #fff; border: none; border-radius: 30px;
+      font-size: 1.09rem; font-weight: 600; padding: 12px 28px; cursor: pointer;
+      box-shadow: 0 2px 8px rgba(60,160,60,0.10); transition: background .18s;
+      display: flex; align-items: center; gap: 7px; text-decoration: none;
+    }
+    .action-btn.insta { background: #e4405f;}
+    .action-btn.phone { background: #2988d7;}
+    .action-btn:hover { filter: brightness(.92);}
+    .contact-form { margin-top: 10px;}
+    .contact-form input, .contact-form textarea {
+      width: 100%; font-size: 1rem; padding: 9px 10px; margin: 7px 0 15px 0;
+      border: 1px solid #cdd6dd; border-radius: 8px; background: #f7fafc;
+      resize: vertical;
+    }
+    .contact-form button {
+      background: #2a4d6c; color: #fff; font-size: 1rem; border: none; border-radius: 8px;
+      padding: 10px 25px; cursor: pointer; font-weight: 600;
+    }
+    footer {
+      text-align: center; font-size: 0.99rem; padding: 24px 10px 14px 10px;
+      background: #24415d; color: #e8f0fe; border-radius: 24px 24px 0 0;
+    }
+    @media (max-width: 700px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .card { padding: 21px 6px 18px 8px;}
+      .container { padding: 0 4px;}
+      header h1 { font-size: 1.65rem;}
     }
   </style>
 </head>
 <body>
   <header>
+    <div class="logo">
+      <!-- logo text/S or <img> (replace if needed)-->
+      S
+    </div>
     <h1>Sahyadri Financial Services</h1>
-    <p>Schemes. Subsidy. Success.<br>योजना | सबसिडी | यश</p>
+    <p>Schemes. Subsidy. Success.<br><span style="font-size:1rem;">योजना | सबसिडी | यश</span></p>
     <nav>
       <ul>
         <li><a href="#home">मुख्यपृष्ठ</a></li>
@@ -34,49 +118,92 @@
       </ul>
     </nav>
   </header>
-  <section id="home">
-    <h2>Welcome to Sahyadri Financial Services</h2>
-    <p>महाराष्ट्रातील प्रत्येक व्यक्तीसाठी योजना, सबसिडी आणि बँक कर्जाचे सुलभ सल्ला व सेवा. तुमच्या व्यवसायाच्या वाढीसाठी आमचा अनुभव आणि मार्गदर्शन!</p>
-  </section>
-  <section id="about">
-    <h2>आमच्याबद्दल</h2>
-    <p>
-      Sahyadri Financial Services – महाराष्ट्रातील सर्व शासकीय योजना, सबसिडी, आणि बँक कर्जासाठी एकमेव समाधान. आमच्या तज्ञ टीममार्फत तुम्हाला सर्व कागदपत्रे, मार्गदर्शन आणि प्रोसिजर सहज मिळेल.
-    </p>
-  </section>
-  <section id="services">
-    <h2>आमच्या सेवा</h2>
-    <ul>
-      <li>सरकारी योजना मार्गदर्शन</li>
-      <li>सबसिडी प्रक्रिया व अर्ज</li>
-      <li>बँक कर्ज सल्ला</li>
-      <li>प्रकल्प अहवाल (DPR) तयारी</li>
-      <li>प्रोफाइल सेटअप, कागदपत्रे, नोंदणी मदत</li>
-    </ul>
-  </section>
-  <section id="schemes">
-    <h2>शासकीय योजना</h2>
-    <ul>
-      <li>PSI Scheme (पॅकेज स्कीम ऑफ इन्सेंटिव्ह)</li>
-      <li>SCLCSS Subsidy (मशीनरी सबसिडी)</li>
-      <li>Annasaheb Patil Arthik Vikas Mahamandal Yojana</li>
-      <li>PMEGP/CMGP/Yuva Udyamita Yojana</li>
-      <li>मुख्यमंत्री अन्न प्रक्रिया उद्योग योजना</li>
-      <li>इतर सर्व केंद्र व राज्य योजना</li>
-    </ul>
-  </section>
-  <section id="contact">
-    <h2>संपर्क साधा</h2>
-    <p>
-      <b>फोन:</b> 8888077001<br>
-      <b>Email:</b> rahulpawarrp443@gmail.com<br>
-      <b>पत्ता:</b> पिंपळे गुरव, पुणे
-    </p>
-    <div class="insta-link">
-      <a href="https://www.instagram.com/sahyadri_finacial_services?igsh=ZTZhbWVka2N4MHA2" target="_blank">
-        आमच्या Instagram पेजला फॉलो करा
-      </a>
+  <div class="container">
+
+    <div class="card" id="home">
+      <h2>Welcome to Sahyadri Financial Services</h2>
+      <p>महाराष्ट्रातील प्रत्येक व्यक्तीसाठी योजना, सबसिडी आणि बँक कर्जाचे सुलभ सल्ला व सेवा. <b>तुमच्या व्यवसायाच्या वाढीसाठी आमचा अनुभव आणि मार्गदर्शन!</b></p>
     </div>
-  </section>
+
+    <div class="card" id="about">
+      <h2>आमच्याबद्दल</h2>
+      <p>
+        Sahyadri Financial Services – महाराष्ट्रातील सर्व शासकीय योजना, सबसिडी, आणि बँक कर्जासाठी एकमेव समाधान. आमच्या तज्ञ टीममार्फत तुम्हाला सर्व कागदपत्रे, मार्गदर्शन आणि प्रोसिजर सहज मिळेल.
+      </p>
+    </div>
+
+    <div class="card" id="services">
+      <h2>आमच्या सेवा</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>सरकारी योजना मार्गदर्शन</h3>
+          <p>केंद्र आणि राज्याच्या सर्व योजना, सबसिडी, लोन स्कीम्सची माहिती आणि अर्ज प्रक्रिया.</p>
+        </div>
+        <div class="service-card">
+          <h3>सबसिडी प्रक्रिया व अर्ज</h3>
+          <p>PSI, SCLCSS, PMEGP, CMGP, Annasaheb Patil योजनेसाठी अर्ज, कागदपत्रे व सबमिशन.</p>
+        </div>
+        <div class="service-card">
+          <h3>बँक कर्ज सल्ला</h3>
+          <p>व्यवसाय, उद्योग, वाहन व गृहकर्जासाठी सल्ला व कागदपत्रे.</p>
+        </div>
+        <div class="service-card">
+          <h3>प्रकल्प अहवाल (DPR) तयारी</h3>
+          <p>Loan, सबसिडी व उद्योगासाठी Project Report आणि सल्ला.</p>
+        </div>
+        <div class="service-card">
+          <h3>प्रोफाइल सेटअप, कागदपत्रे, नोंदणी</h3>
+          <p>उद्योगासाठी सर्व नोंदणी, Udyami Mitra, MSME, DIC, GST प्रोफाइल सेटअप.</p>
+        </div>
+        <div class="service-card">
+          <h3>इतर सर्व सेवा</h3>
+          <p>स्कीम अपडेट्स, माहिती, कस्टमर सपोर्ट, WhatsApp मार्गदर्शन.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="schemes">
+      <h2>शासकीय योजना</h2>
+      <ul>
+        <li>PSI Scheme (पॅकेज स्कीम ऑफ इन्सेंटिव्ह)</li>
+        <li>SCLCSS Subsidy (मशीनरी सबसिडी)</li>
+        <li>Annasaheb Patil Arthik Vikas Mahamandal Yojana</li>
+        <li>PMEGP / CMGP / Yuva Udyamita Yojana</li>
+        <li>मुख्यमंत्री अन्न प्रक्रिया उद्योग योजना</li>
+        <li>इतर सर्व केंद्र व राज्य योजना</li>
+      </ul>
+    </div>
+
+    <div class="card" id="contact">
+      <h2>संपर्क साधा</h2>
+      <div class="actions-bar">
+        <a href="https://wa.me/8888077001" target="_blank" class="action-btn">
+          <span>WhatsApp</span>
+        </a>
+        <a href="tel:8888077001" class="action-btn phone">
+          <span>Call</span>
+        </a>
+        <a href="https://www.instagram.com/sahyadri_finacial_services?igsh=ZTZhbWVka2N4MHA2" target="_blank" class="action-btn insta">
+          <span>Instagram</span>
+        </a>
+      </div>
+      <div style="text-align:center; font-size:1rem; margin-top:10px;">
+        <b>फोन:</b> 8888077001<br>
+        <b>Email:</b> rahulpawarrp443@gmail.com<br>
+        <b>पत्ता:</b> पिंपळे गुरव, पुणे
+      </div>
+      <form class="contact-form" action="mailto:rahulpawarrp443@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="तुमचं नाव" required>
+        <input type="email" name="email" placeholder="ईमेल (Optional)">
+        <textarea name="message" placeholder="तुमचा मेसेज" rows="3" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Sahyadri Financial Services<br>
+    Powered by Rahul Pawar | Designed with ❤ for Maharashtra
+  </footer>
 </body>
 </html>
